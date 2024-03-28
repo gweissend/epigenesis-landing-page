@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { db } from './firebase/config'
-import { collection, getDocs, addDoc } from 'firebase/firestore'
+import { collection, addDoc } from 'firebase/firestore'
 // ExampleModule.js
 export const coverImage = require('./images/cover.png');
 
@@ -9,7 +9,6 @@ export const coverImage = require('./images/cover.png');
 export default function App() {
   // setState
   const [newEmail, setNewEmail] = useState('')
-  const [newBooks, setBooks] = useState(null)
 
   // Add email to waitlist collection in DB on submit
   const handleSubmit = async (e) => {
